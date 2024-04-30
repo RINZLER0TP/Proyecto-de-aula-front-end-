@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administrador</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        background-image: url('img_admin.png');
+      background-size: cover; 
+      background-repeat: no-repeat;
+      background-position: 0 -20vh;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      width: 800px; 
+      overflow: hidden; 
+    }
+    .card-header {
+      background-color: orange; 
+      color: #fff;
+      border-radius: 15px 15px 0 0;
+      border-bottom: 3px solid #d45d00; 
+    }
+    .nav-link {
+      color: black; 
+      font-weight: bold;
+    }
+    .nav-link.active {
+      background-color: orange !important; 
+      color: white !important; 
+    }
+    .list-group-item {
+      padding-left: 10px; 
+      border: none; 
+      cursor: pointer; 
+    }
+    .list-group-item.active {
+      background-color: orange !important; 
+      color: white !important; 
+    }
+    .list-group-item:hover {
+      background-color: #f0f0f0; 
+    }
+    .btn {
+      background-color: black; 
+      color: white; 
+      border: none; 
+    }
+    .btn:hover {
+      background-color: orange; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8"> 
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="fs-5">Nombre del Administrador</span>
+          </div>
+          <div class="card-body">
+            <ul class="nav nav-pills mb-3">
+              <li class="nav-item">
+                <a class="nav-link active" id="proveedores-tab" data-bs-toggle="tab" href="#proveedores" role="tab" aria-controls="proveedores" aria-selected="true">Proveedores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="usuarios-tab" data-bs-toggle="tab" href="#usuarios" role="tab" aria-controls="usuarios" aria-selected="false">Usuarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pqrs-tab" data-bs-toggle="tab" href="#pqrs" role="tab" aria-controls="pqrs" aria-selected="false">PQRS</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="proveedores" role="tabpanel" aria-labelledby="proveedores-tab">
+                <div class="d-flex justify-content-between mb-3">
+                  <h4 class="mb-0">Proveedores</h4>
+                  <button class="btn btn-primary">Añadir Proveedor</button>
+                </div>
+                <div class="card">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item ">Proveedor 1</li>
+                    <li class="list-group-item">Proveedor 2</li>
+                    <li class="list-group-item">Proveedor 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="usuarios" role="tabpanel" aria-labelledby="usuarios-tab">
+                <h4 class="mb-3">Usuarios</h4>
+                <div class="card">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Usuario 1</li>
+                    <li class="list-group-item">Usuario 2</li>
+                    <li class="list-group-item">Usuario 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pqrs" role="tabpanel" aria-labelledby="pqrs-tab">
+                <h4 class="mb-3">PQRS</h4>
+                <div class="card">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Queja 1</li>
+                    <li class="list-group-item">Queja 2</li>
+                    <li class="list-group-item">Queja 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
